@@ -8,11 +8,11 @@
 # The java implementation to use.  Required.
 export JAVA_HOME={{java_home}}
 
-# Extra Java CLASSPATH elements.  Optional.
-# export HADOOP_CLASSPATH=
-
 export HADOOP_HOME="/root/ephemeral-hdfs"
 export HADOOP_MAPREDUCE_HOME="/root/mapreduce"
+
+# Extra Java CLASSPATH elements.  Optional.
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HADOOP_HOME/share/hadoop/tools/lib/*
 
 # The maximum amount of heap to use, in MB. Default is 1000.
 export HADOOP_HEAPSIZE=1000
